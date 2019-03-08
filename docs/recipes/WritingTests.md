@@ -437,7 +437,7 @@ const create = () => {
   };
   const next = jest.fn()
 ​
-  const invoke = (action) => thunk(store)(next)(action)
+  const invoke = thunk(store)(next)
 ​
   return {store, next, invoke}
 };
